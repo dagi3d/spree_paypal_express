@@ -78,6 +78,7 @@ module PaypalExpress
     # @order.checkout.update_charges
     #     @order.update_totals
     @order.checkout.save
+    @order.save
     # debugger
     
     
