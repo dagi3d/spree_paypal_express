@@ -84,7 +84,8 @@ module PaypalExpress
     purchase = express_gateway.purchase((@order.total*100),
       :ip       => request.remote_ip,
       :payer_id => params[:payer_id],
-      :token    => params[:token]
+      :token    => params[:token],
+      :currency => Spree::Config[:paypal_express_currency] || 'USD'
     )
     
     if !purchase.success?
@@ -146,7 +147,7 @@ module PaypalExpress
           :login => Spree::Config[:paypal_express_login],
           :password => Spree::Config[:paypal_express_password],
           :signature => Spree::Config[:paypal_express_signature]
-        )
+    )
   end
   
   

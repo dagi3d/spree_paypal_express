@@ -12,9 +12,16 @@
     <%= text_field_tag('preferences[paypal_express_password]', Spree::Config[:paypal_express_password], :maxlength => 100, :size => 100)%>
     <br/>
   </p>
- <p>
+  
+  <p>
     <label>Paypal Express Signature:</label><br />
     <%= text_field_tag('preferences[paypal_express_signature]', Spree::Config[:paypal_express_signature], :maxlength => 100, :size => 100)%>
+    <br/>
+  </p>
+  
+  <p>
+    <label>Paypal Express Currency Code:</label><br />
+    <%= text_field_tag('preferences[paypal_express_currency]', Spree::Config[:paypal_express_currency], :maxlength => 100, :size => 10)%>
     <br/>
   </p>
   
